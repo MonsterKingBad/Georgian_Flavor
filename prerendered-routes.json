@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/add-dish",
+    "/admin",
+    "/contact",
+    "/home",
+    "/login",
+    "/recipes"
+  ]
+}
