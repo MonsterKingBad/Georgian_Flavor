@@ -1,0 +1,51 @@
+<div class="add-dish-container">
+    <form (ngSubmit)="saveDish()">
+      <label for="name">სახელი:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required />
+  
+      <label for="author">ავტორი:</label>
+      <input type="text" id="author" [(ngModel)]="author" name="author" required />
+  
+      <label for="image">ფოტოს URL:</label>
+      <input type="text" id="image" [(ngModel)]="image" name="image" />
+  
+      <label for="imageUpload">ფოთოს ატვირთვა:</label>
+      <input type="file" id="imageUpload" (change)="onImageSelected($event)" />
+  
+      <div *ngIf="uploadedImageUrl">
+        <p>გადახედვა:</p>
+        <img [src]="uploadedImageUrl" alt="Image Preview" style="max-width: 100%; height: auto;" />
+      </div>
+  
+      <label for="details">დეტალები:</label>
+      <textarea id="details" [(ngModel)]="details" name="details" required></textarea>
+  
+      <label for="ingredients">ინგრედიენტები:</label>
+      <div *ngFor="let ingredient of ingredients; let i = index; trackBy: trackByIndex">
+        <input
+          type="text"
+          [(ngModel)]="ingredients[i]"
+          name="ingredient{{ i }}"
+          placeholder="Enter ingredient"
+          required
+        />
+        <button type="button" (click)="removeIngredient(i)">წაშლა</button>
+      </div>
+      <button type="button" (click)="addIngredient()">დაამატე ინგრედიენტები</button>
+  
+      <label for="recipe">ინგრედიენტები:</label>
+      <div *ngFor="let step of recipeSteps; let i = index; trackBy: trackByIndex">
+        <textarea
+          [(ngModel)]="recipeSteps[i]"
+          name="step{{ i }}"
+          placeholder="ჩაწერე ინგრედიენტები"
+          required
+        ></textarea>
+        <button type="button" (click)="removeRecipeStep(i)">წაშლა</button>
+      </div>
+      <button type="button" (click)="addRecipeStep()">დაამატე ინგრედიენტები</button>
+  
+      <button type="submit">დამახსოვრება</button>
+    </form>
+  </div>
+  

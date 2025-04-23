@@ -1,0 +1,9 @@
+<header>
+  <app-header></app-header>
+</header>
+
+<router-outlet></router-outlet>
+
+<app-cards *ngIf="!isRecipesPage && !isContactPage  &&!isLoginPage && !isAdminPage && !isAddDishPage && !isEditDishPage"></app-cards>
+
+<app-footer></app-footer>

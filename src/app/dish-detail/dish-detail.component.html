@@ -1,0 +1,22 @@
+<div class="dish-detail" *ngIf="dish; else notFound">
+  <h1>{{ dish.name }}</h1>
+  <p class="author">ავტორი: {{ dish.author }}</p>
+  <img class="dish-image" [src]="dish.image" alt="{{ dish.name }}" />
+  
+  <h3>ინგრედიენტები:</h3>
+  <ul>
+    <li *ngFor="let ingredient of dish.ingredients">{{ ingredient }}</li>
+  </ul>
+
+  <h3>Details:</h3>
+  <ul>
+    <li>{{dish.details}}</li>
+  </ul>
+  
+
+  <a class="back-button" routerLink="/recipes">უკან დაბრუნება</a>
+</div>
+
+<ng-template #notFound>
+  <div class="not-found">ბოდიშით, ეს კერძი ვერ მოიძებნა.</div>
+</ng-template>

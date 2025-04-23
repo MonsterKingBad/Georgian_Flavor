@@ -1,0 +1,83 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    height: 9000px;
+    background-color: #f5f5f5; /* Light neutral background for the rest of the page */
+}
+
+html, body {
+    overflow: hidden; /* Optional for now but limits scrolling */
+}
+
+.background {
+    position: relative;
+    background-image: url(https://madloba.info/media/images/blyuda-gruzinskoy-kuhni-01.max-1200x1200.format-webp.webp);
+    width: 100%;
+    height: 600px;
+    background-color: rgba(220, 204, 167, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 10px solid rgba(150, 103, 36, 0.8); /* Add a separator for a polished look */
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)); /* Softer gradient */
+    z-index: 1;
+}
+
+
+.background h1 {
+    color: rgba(255, 255, 255, 0.9); /* Light and elegant */
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Elegant title font */
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Add depth to text */
+    z-index: 2;
+    margin-bottom: 30px; 
+}
+
+button {
+    z-index: 2;
+    padding: 12px 30px;
+    background-color: rgba(150, 103, 36, 255);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif; /* Clean button font */
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Give the button a slightly lifted appearance */
+}
+
+button:hover {
+    background-color: rgba(150, 103, 36, 0.8);
+    transform: scale(1.1); /* Subtle scaling on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: scale(0.95); /* Pressing down effect */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+}

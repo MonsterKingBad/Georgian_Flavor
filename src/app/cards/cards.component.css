@@ -1,0 +1,106 @@
+.cards-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card h3 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  font-family: 'Cormorant Garamond', serif; 
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-top: -1%;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6 {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#card1 {
+  background-image: url(https://gastronomia.ge/wp-content/uploads/2018/12/gujh-696x465.jpg);
+}
+
+#card2 {
+  background-image: url(https://www.tv9news.ge//images/temp/2024/03/24/f3955e20d150c6b2e8cae658536f0f0a.jpg);
+}
+
+#card3 {
+  background-image: url(https://storage.georgia.travel/images/guruli-khachapuri-gnta.webp);
+}
+
+#card4 {
+  background-image: url(https://imageproxy.wolt.com/menu/menu-images/661937ebecadc3a6d570b8da/572fab5a-fb05-11ee-8e09-0ab21da96bea_________750_.jpg);
+}
+
+#card5 {
+  background-image: url(https://i.ibb.co/5jrwCFx/image-2024-11-27-195826849.png);
+}
+
+#card6 {
+  background-image: url(https://i.ibb.co/hRbR8XDm/467471806-1713168836192661-8228689425703492210-n.jpg);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Playfair+Display:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Playfair+Display:wght@700&display=swap');
+
+@media (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+  }
+}

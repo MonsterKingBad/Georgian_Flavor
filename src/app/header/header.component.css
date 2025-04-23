@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  overflow: hidden;
+}
+
+header {
+  background-color: #dcccaa;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2em;
+  gap: 2%;
+}
+
+li {
+  font-size: 18px;
+  font-family: "Georgia", serif;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+li.logo {
+  margin-right: auto;
+}
+
+li.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6b4226;
+}
+
+li a  {
+  text-decoration: none;
+  color: #6b4226;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 3px;
+}
+
+.logout-button {
+  font-size: 18px;
+  font-family: "Georgia", serif;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logout-button {
+  text-decoration: none;
+  color: #6b4226;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 3px;
+  background: none;
+  border: none;
+}
+li a:hover {
+  color: #333;
+  border-bottom: 2px solid #6b4226; 
+}
+
+
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    margin-bottom: 20%;
+    gap: 1em;
+  }
+
+  nav{
+    height: 00px;
+  }
+
+  li.logo img {
+    width: 70px;
+    height: 70px;
+    margin-left: 190%;
+    margin-top: 30%;
+  }
+
+  
+
+  
+  
+}

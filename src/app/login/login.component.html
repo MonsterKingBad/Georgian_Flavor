@@ -1,0 +1,12 @@
+<form (ngSubmit)="onLogin()" #loginForm="ngForm">
+    <label>ემაილი:</label>
+    <input type="email" [(ngModel)]="email" name="email" required  placeholder="ჩაწერეთ თქვენი ემაილი"/>
+  
+    <label>პაროლი:</label>
+    <input type="password" [(ngModel)]="password" name="password" required placeholder="ჩაწერეთ თქვენი პაროლი"/>
+  
+    <button type="submit">Login</button>
+  </form>
+  
+  <p *ngIf="loginError" style="color: red;">Invalid credentials</p>
+  

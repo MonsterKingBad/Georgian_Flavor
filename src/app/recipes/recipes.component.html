@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="card" *ngFor="let dish of dishes">
+    <img [src]="dish.image" [alt]="dish.name" />
+    <div class="card-description">
+      <h3>{{ dish.name }}</h3>
+      <p><strong>ავტორი:</strong> {{ dish.author }}</p>
+      <a [routerLink]="['/recipes', dish.id]" class="view-details">
+
+        მეტის ნახვა →
+      </a>
+    </div>
+  </div>
+</div>

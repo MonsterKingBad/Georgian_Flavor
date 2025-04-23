@@ -1,0 +1,29 @@
+<header>
+  <nav>
+    <ul>
+      <li class="logo">
+        <a routerLink="/home">
+          <img src="https://i.ibb.co/fpDKvqv/logo.png" alt="Logo" />
+        </a>
+      </li>
+      <li><a routerLink="/home">მთავარი</a></li>
+      <li><a routerLink="/recipes">რეცეპტები</a></li>
+      <li><a routerLink="/contact">კონტაქტი</a></li>
+
+      <!-- Show only if the user is an admin -->
+      <li *ngIf="authService.isAdmin()">
+        <a routerLink="/admin">ადმინი</a>
+      </li>
+
+      <!-- Logout button if logged in -->
+      <li *ngIf="authService.isLoggedIn()">
+        <button (click)="logout()" class="logout-button">გასვლა</button>
+      </li>
+
+      <!-- Optional login link if not logged in -->
+      <li *ngIf="!authService.isLoggedIn()">
+        <a routerLink="/login">შესვლა</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,81 @@
+.add-dish-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #444;
+  }
+  
+  input,
+  textarea {
+    width: 90%; /* Controlled width here */
+    max-width: 400px; /* Prevent it from going too wide */
+    padding: 8px 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #6b4226;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: #6b4226;
+    color: white;
+    width: 90%; /* Keep buttons same width as inputs */
+    max-width: 400px;
+    margin-top: 5px;
+  }
+  
+  button:hover {
+    background-color: #4e2b1f;
+  }
+  
+  button:active {
+    background-color: #3b1c12;
+  }
+  
+  /* Small buttons like remove/add ingredient */
+  button[type="button"] {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    input,
+    textarea,
+    button {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
